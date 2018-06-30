@@ -1,0 +1,19 @@
+<div>
+  <h3>Top Movies</h3>
+  <div class="grid card-deck grid-dashboard">
+    <a *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}">
+      <div class=" card-dashboard card">
+        <img class="card-img-top img-dashboard" src="{{movie.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">
+            Description of movie...
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

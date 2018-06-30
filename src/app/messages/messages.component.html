@@ -1,0 +1,8 @@
+<div *ngIf="messagesService.messages.length" class="jumbotron">
+  <h2 class="display-4">Messages</h2>
+  <div *ngFor='let message of messagesService.messages'>
+    <hr class="my-4">
+    <p><strong>{{messagesService.serviceName}}</strong> : {{message}}</p>
+  </div>
+  <button class="clear btn btn-primary btn-lg" (click)="messagesService.clear()">clear</button>
+</div>

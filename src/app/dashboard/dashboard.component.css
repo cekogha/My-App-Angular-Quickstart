@@ -1,0 +1,25 @@
+.limit-size-img{
+    max-height: 200px;
+    max-width: 200px;
+
+}
+
+.grid-dashboard {
+    /* text-align: center; */
+    /* background-color: aqua; */
+    display : grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* grid-template-rows: auto; */
+    grid-gap: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+
+}
+
+.card-dashboard{
+    /* max-height: 100px; */
+}
+
+.img-dashboard{
+   background-size: 100%;
+}

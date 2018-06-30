@@ -1,0 +1,23 @@
+<!-- NAV Added  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" routerLink="/">
+      <img src="./favicon.ico">
+    </a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/dashboard">
+           DashBoard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/movies">
+          Movies
+        </a>
+      </li>
+    </ul>
+
+    <!-- Search section -->
+     <app-movies-search></app-movies-search>
+  </div>
+</nav>

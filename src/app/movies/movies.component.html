@@ -1,0 +1,53 @@
+<div class="accordion" id="accordionExample">
+  <div class="card" *ngFor="let movie of movies" [class.selected]="movie === selectedMovie" (click)="onSelect(movie)">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0 grid-car-header-h5-movies">
+        <button routerLink="/detail/{{movie.id}}" class="btn btn-link car-header-btn-movies" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          {{movie.title}}
+        </button>
+        <button class="btn btn-outline-dark delete-movie" title="delete movie" (click)="delete(movie)">x</button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body grid-card-body-movies">
+        <div>
+          <h5>Genre : </h5>
+          <p>{{movie.genre}}</p>
+          <h5>Cast : </h5>
+          <p>{{movie.cast}}</p>
+          <h5>Directors : </h5>
+          <p>{{movie.director}}</p>
+        </div>
+        <img class="img-movies" src="{{movie.image}}" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD a NEW MOVIE'S TITLE -->
+<form class="form-add-movie">
+  <h3 class="display-4">Add new movie : </h3>
+  <div class="row">
+    <div class="col">
+      <input #movieTitle type="text" class="form-control" placeholder="Movie Title">
+    </div>
+    <div class="col">
+      <input #movieGenre type="text" class="form-control" placeholder="Movie Genre">
+    </div>
+  </div>
+  <div class="">
+    <input #movieDirector type="text" class="form-control" placeholder="Movie Directors">
+  </div>
+  <div class="">
+    <input #movieCast type="text" class="form-control" placeholder="Movie Cast">
+  </div>
+  <div>
+    <button class="btn btn-outline-success btn-block" (click)="add(movieTitle.value); movieTitle.value=''">add</button>
+  </div>
+</form>
+<form class="">
+
+</form>
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
